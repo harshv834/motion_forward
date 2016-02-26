@@ -32,8 +32,8 @@ class forwardAction{
 			// Add preempt callback
 			forwardServer_.registerPreemptCallback(boost::bind(&forwardAction::preemptCB, this));
 			// Declaring publisher for PWM and direction
-			PWM = nh_.advertise<std_msgs::Int32>("PWM",1000);
-			direction = nh_.advertise<std_msgs::Int32>("direction",1000);
+			PWM = nh_.advertise<std_msgs::Int32>("PWMx",1000);
+			direction = nh_.advertise<std_msgs::Int32>("directionx",1000);
 			// Starting new Action Server
 			forwardServer_.start();
 		}
